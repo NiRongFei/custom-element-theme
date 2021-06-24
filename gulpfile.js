@@ -16,4 +16,5 @@ gulp.task('move-font', function() {
   return gulp.src(['./theme/fonts/**']).pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('default',['css-wrap','move-font']);
+// gulp.task('default',['css-wrap','move-font']);
+gulp.task('default',gulp.series('css-wrap','move-font'));
